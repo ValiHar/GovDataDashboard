@@ -5,6 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+// Import main modules
+import { ThemeModule } from './theme/theme.module';
+import { ContentModule } from './content/content.module';
+import { CoreModule } from './core/core.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +17,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ThemeModule,
+    ContentModule,
+    CoreModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
