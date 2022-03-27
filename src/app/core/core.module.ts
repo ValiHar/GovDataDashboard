@@ -9,12 +9,14 @@ import {
 import { DataService } from './services/data.service';
 
 
+
 export const SERVICES = [
   DataService
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule
   ]
