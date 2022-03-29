@@ -8,9 +8,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'GovData - Dashboard';
 
-  constructor(public router: Router) {
-
-  }
+  constructor(public router: Router) {}
 
   public navigate() {
     this.router.navigateByUrl('');

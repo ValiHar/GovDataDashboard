@@ -11,29 +11,47 @@ import { DataService } from 'src/app/core/services/data.service';
 })
 export class PieChartComponent implements OnInit {
 
+  /**
+   * The data fetched via the api
+   */
   departments: Department[] = [];
 
+  /**
+   * The chart theme based on the echarts themes
+   */
   theme: string | ThemeOption = "dark";
+
+  /**
+   * The options object defines how the displayed chart should look like
+   */
   options: any;
+
+  /**
+   * Needed for dynamically updating the chart
+   */
   updateOptions: any;
 
+  /**
+   * The constructor updates teh chart with the most recent data from the API
+   * 
+   * @param dataservice Inject the dataservice to be able to fetch the department data
+   */
 
   constructor(private dataService: DataService) {
     this.dataService.getDepartments().subscribe((departments: Department[]) => {
       this.departments = departments;
-      let nameSet = this.departments.map(a => a.department);
       let dataSet = this.departments.map(a => new DataPoint(a.datasets, a.department));
-      
+
       this.updateOptions = {
         series: [{
           data: dataSet
         }]
       };
     });
-   }
+  }
 
   ngOnInit(): void {
-    
+
     this.options = {
       tooltip: {
         trigger: 'item',
@@ -49,7 +67,7 @@ export class PieChartComponent implements OnInit {
           width: '110',
           overflow: 'break'
         },
-        
+
       },
       calculable: true,
       series: [

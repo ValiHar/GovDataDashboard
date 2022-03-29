@@ -6,9 +6,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ThemeModule } from '../theme/theme.module';
 
 
-
-
-
 @NgModule({
   declarations: [
     DashboardComponent

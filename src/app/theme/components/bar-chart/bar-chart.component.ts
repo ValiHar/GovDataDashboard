@@ -11,14 +11,41 @@ import { DataService } from 'src/app/core/services/data.service';
 })
 export class BarChartComponent implements OnInit {
 
+  /**
+   * The options object defines how the displayed chart should look like
+   */
   public options: any;
+
+  /**
+   * Needed for dynamically updating the chart
+   */
   public updateOptions: any;
+
+  /**
+   * The data fetched via the api
+   */
   public departments: Department[] = [];
+
+  /**
+   * A threshold for the bar chart height
+   */
   public yMax = 3000;
+
+  /**
+   * The gray areas behind the bars
+   */
   public dataShadow: number[] = [];
 
+  /**
+   * The chart theme based on the echarts themes
+   */
   theme: string | ThemeOption = "dark";
 
+  /**
+   * The constructor updates teh chart with the most recent data from the API
+   * 
+   * @param dataservice Inject the dataservice to be able to fetch the department data
+   */
 
   constructor(public dataservice: DataService) {
     this.dataservice.getDepartments().subscribe((departments: Department[]) => {

@@ -17,7 +17,7 @@ describe('DataService', () => {
 
   it('should return expected data (HttpClient called once)', (done: DoneFn) => {
     const expectedDepartments: Department[] =
-    [{
+      [{
         department: "Statistisches Bundesamt",
         description: "Statistisches Bundesamt",
         datasets: 2372
@@ -152,10 +152,10 @@ describe('DataService', () => {
         description: "",
         datasets: 1
       }
-    ];
-  
+      ];
+
     httpClientSpy.get.and.returnValue(of(expectedDepartments));
-  
+
     service.getDepartments().subscribe({
       next: department => {
         expect(expectedDepartments)

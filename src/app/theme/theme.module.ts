@@ -16,7 +16,7 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     FooterComponent,
     BarChartComponent,
     PieChartComponent,
-    
+
   ],
   imports: [
     CommonModule,

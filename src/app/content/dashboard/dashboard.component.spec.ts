@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 
 class MockDataService {
 
-  public getDepartments(): Observable<Department[]> { return new Observable();}
+  public getDepartments(): Observable<Department[]> { return new Observable(); }
 }
 
 describe('DashboardComponent', () => {
@@ -17,13 +17,13 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ],
+      declarations: [DashboardComponent],
       providers: [
         DashboardComponent,
         { provide: DataService, useClass: MockDataService }
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     component = TestBed.inject(DashboardComponent);
     dataService = TestBed.inject(DataService);
