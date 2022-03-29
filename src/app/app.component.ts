@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<app-dashboard-layout></app-dashboard-layout>'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'GovDataDashboard';
