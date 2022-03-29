@@ -1,3 +1,68 @@
-<div *ngFor="let department of this.departments">
-    <p>{{ department.department }}</p>
+<div class="container">
+  <div class="row header">
+    <h3 class="display-5">
+      German Federal Ministries
+      <small class="text-muted">displayed by datasets provided to GovData.de</small>
+    </h3>
+    <p class="card-text">
+      <a href="GovData.de">GovData.de</a> is the data portal for Germany which intends to give the federal, state and
+      local governments a platfrom to share their data.
+      Although the "Open Data Act" makes it obligatory to share data, only about 52,000 data sets are online so
+      far. This dashboard showcases the numbers of datasets that the individual federal ministries have shared via the
+      public data portal so far.
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Dataset distribution
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            ordered by the number of datasets shared by each ministry
+          </h6>
+          <p class="card-text">
+            The nightingale chart on the left illustrates the overall distribution of shared datasets over the German
+            Federal Ministries.
+          </p>
+          <p class="card-text">
+            To filter the chart, click on the ministry names in the legend. This will hide/show the clicked ministry in
+            the diagram. You can also select/deselect all ministries or invert the diagram with the buttons on the left
+            side of the legend.
+          </p>
+          <p class="card-text">
+            Hovering over the name of a ministry shows a tooltip that displays the precise number of datasets the
+            ministry shared, as well as its percentage relative to all currently displayed ministries.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <app-pie-chart></app-pie-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            Distribution of datasets relative to neighbors
+          </h5>
+          <p class="card-text">
+            The bar chart below provides another method to explore the distribution of published datasets over the german federal ministries. In the bar chart the ministries are sorted by the amout of datasets they've shared, as in the nightingale chart.
+          </p>
+          <p class="card-text">
+            However, the bar chart enables you to easily compare a ministry to its neighbors, by zooming into the diagram with the mouse wheel. Hovering over the bar of a ministry again shows a tooltip with specific information about the ministry. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-bar-chart></app-bar-chart>
+    </div>
+  </div>
 </div>
