@@ -10,9 +10,12 @@ export class HeaderComponent implements OnInit {
 
   constructor() {
 
-   }
+  }
 
   ngOnInit(): void {
   }
 
+  public goToLink(url: string) {
+    window.open(url, "_blank");
+  }
 }
