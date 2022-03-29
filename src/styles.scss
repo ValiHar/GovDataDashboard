@@ -2,3 +2,22 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  background-color: #100C2A;
+}
+
+.display-5 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h2 {
+  padding: 1%;
+  color: white;
+}
