@@ -4,7 +4,7 @@
 
 This GovData Dashboard is based on GovData.de and is part of my application for the Tech4Germany Engineering Fellowship.
 
-To run this application you need to have node and npm installed.
+To run this application you need to have node and npm installed. To run this application you need to have node and npm installed. To build/run this website please move to the root directory in your commandline and install the projects dependencies with `npm install`.
 
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
