@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContentRoutingModule } from './content-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThemeModule } from '../theme/theme.module';
+
 
 
 
@@ -14,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     ContentRoutingModule,
-    NgbModule
+    NgbModule,
+    ThemeModule
   ]
 })
 export class ContentModule { }

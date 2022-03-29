@@ -4,7 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 
 
@@ -12,16 +14,22 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
   declarations: [
     HeaderComponent,
     FooterComponent,
-    DashboardLayoutComponent,
+    BarChartComponent,
+    PieChartComponent,
+    
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    DashboardLayoutComponent
+    BarChartComponent,
+    PieChartComponent
   ]
 })
 export class ThemeModule { }

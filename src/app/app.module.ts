@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 // Import main modules
 import { ThemeModule } from './theme/theme.module';
 import { ContentModule } from './content/content.module';
 import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,9 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
     ThemeModule,
     ContentModule,
     CoreModule.forRoot()
