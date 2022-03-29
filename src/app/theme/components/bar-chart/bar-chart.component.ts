@@ -3,7 +3,6 @@ import { ThemeOption } from 'ngx-echarts';
 import { DataPoint } from 'src/app/core/models/dataPoint';
 import { Department } from 'src/app/core/models/department';
 import { DataService } from 'src/app/core/services/data.service';
-import { ChartTheme } from '../../chart-themes/chart-theme';
 
 @Component({
   selector: 'app-bar-chart',
